@@ -12,27 +12,22 @@
             <div class="form-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
               <div class="default-form">
                 <h4>Регистрация<span>.</span></h4>
-                <form method="post" action="#">
+                <form @submit.prevent="PostUserName" method="post" action="#">
                   <div class="form-group">
                     <div class="field-inner">
-                      <input type="text" name="username" value="" placeholder="Your Name"
+                      <input type="email" v-model="email" name="username" value="" placeholder="Your Name"
                              required="">
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="field-inner">
-                      <input type="email" name="email" value="" placeholder="Email Address"
+                      <input type="password" v-model="password" name="password" value="" placeholder="Email Address"
                              required="">
                     </div>
                   </div>
+              
                   <div class="form-group">
-                    <div class="field-inner">
-                      <input type="text" name="phone" value="" placeholder="Phone Number"
-                             required="">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <button class="theme-btn btn-style-one">
+                    <button type="submit" class="theme-btn btn-style-one">
                       <i class="btn-curve"></i>
                       <span class="btn-title">Регистрация</span>
                     </button>
@@ -49,7 +44,31 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
+  data(){
+    return{
+      email:'',
+      password:''
+    }
+  },
+methods: {
+   async PostUserName(){     
+      try {
+         const response = await axios.post('http://134.122.74.23/user/login/',{email:this.email, password:this.password})  
+         const res =  localStorage.setItem('user',response.data) 
+         console.log(response.data)
+         
+      }catch(e){
+            console.log(e)
+      }
+    console.log('ko')
+    console.log(this.username)
+      this.username = ""
+    this.password = ""
+
+  },
+}
 
 }
 </script>

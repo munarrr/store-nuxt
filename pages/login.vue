@@ -13,6 +13,8 @@
             <input v-model="email" type="text">
             <label for="email">Password</label>
            <input v-model="password" type="password">
+            <label for="email">Password</label>
+           <input v-model="password2" type="password">
            <nuxt-link to="/newpassword">Забыли пароль</nuxt-link>
             <nuxt-link to="/registr">Регистрация</nuxt-link>
               <!-- <nuxt-link to="/profile"><button>Войти</button></nuxt-link>  -->
@@ -26,23 +28,24 @@
 
 <script>
 import axiosAPI from '../api/axiosAPI.js'
+import axios from 'axios'
 export default {
   data(){
     return{
       username:'',
       password:'',
+      password2:'',
       email:''
     }
   },
   methods:{
-   async PostUser(){
-     
+   async PostUser(){     
       try {
-             await axiosAPI.post('user/registr',{email:this.email, password:this.password,username:this.username})
-           
-            }catch(e){
+         const response = await axios.post('http://134.122.74.23/user/register/',{email:this.email, password:this.password,username:this.username,password2:this.password2})  
+         return response         
+      }catch(e){
             console.log(e)
-        }
+      }
     console.log('ko')
     console.log(this.username)
       this.username = ""

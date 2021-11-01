@@ -14,7 +14,7 @@
                 <h1 class="banner-main-title">M.Manzoni COLLECTION FW 21/22</h1>
                 <div class="link-box">
                   <nuxt-link class="ho" to="/about">
-                    <span class="banner-btn">В КАТАЛОГ</span>
+                    <span class="banner-btn">nouohn</span>
                   </nuxt-link>
                 </div>
               </div>

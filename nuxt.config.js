@@ -1,4 +1,4 @@
-
+import i18n from './config/i18n.js'
 export default {
   mode: 'universal',
   /*
@@ -65,26 +65,8 @@ export default {
   */
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/i18n'
+   
   ],
-  i18n: {
-    locales: ['en', 'ru', 'es'],
-    defaultLocale: 'ru',
-    vueI18n: {
-      fallbackLocale: 'en',
-      messages: {
-        en: {
-          welcome: 'Welcome'
-        },
-        fr: {
-          welcome: 'Bienvenue'
-        },
-        es: {
-          welcome: 'Bienvenido'
-        }
-      }
-    }
-  },
   axios: {
     baseURL: 'http://localhost:5000/api', // Used as fallback if no runtime config is provided
   },

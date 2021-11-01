@@ -1,7 +1,7 @@
 <template>
   <header :class="`main-header header-style-one ${sticky ? 'fixed-header' : ''}`">
     <div class="top-header">
-      <p class="top-header-text">{{$t('messages.en')}}</p>
+      <p class="top-header-text">add</p>
     </div>
     <!-- Header Upper -->
     <div class="header-upper">
