@@ -1,8 +1,5 @@
 <template>
   <header :class="`main-header header-style-one ${sticky ? 'fixed-header' : ''}`">
-    <div class="top-header">
-      <p class="top-header-text">add</p>
-    </div>
     <!-- Header Upper -->
     <div class="header-upper">
       <div class="inner-container clearfix">
@@ -23,19 +20,19 @@
             <div class="collapse navbar-collapse show clearfix">
               <ul class="navigation clearfix">
                 <li class="current dropdown"><nuxt-link to="/">{{lo ? 'Главная': 'Home'}}</nuxt-link>
-              
+
                 </li>
                 <li class="dropdown"><nuxt-link to="/aboutt">О магазине</nuxt-link>
-                 
+
                 </li>
                 <li class="dropdown"><nuxt-link to="/products">Каталоги</nuxt-link>
-                  
+
                 </li>
                 <li class="dropdown"><nuxt-link to="/">Доставка</nuxt-link>
-                  
+
                 </li>
                 <li class="dropdown"><nuxt-link to="/">Новинки</nuxt-link>
-                  
+
                 </li>
                 <li><nuxt-link to="/contact">Контакты</nuxt-link></li>
               </ul>
@@ -69,12 +66,12 @@
           </li>
           <li><nuxt-link to="/about">О магазине</nuxt-link></li>
           <li class="dropdown"><a href="#">Новинки<div class="dropdown-btn"><span class="fa fa-angle-right"></span></div></a>
-            
+
           </li>
           <li class="dropdown"><nuxt-link to="#">Каталоги<div class="dropdown-btn"><span class="fa fa-angle-right"></span></div></nuxt-link>
           </li>
           <li class="dropdown"><nuxt-link to="#">Новые<div class="dropdown-btn"><span class="fa fa-angle-right"></span></div></nuxt-link>
-           
+
           </li>
           <li class="dropdown"><nuxt-link to="#">Доставка<div class="dropdown-btn"><span class="fa fa-angle-right"></span></div></nuxt-link>
           </li>
@@ -101,7 +98,7 @@ import {mapState} from 'vuex'
 
       const mobileNav = document.querySelector('.mobile-nav__container');
       const dropdownMenu = mobileNav.querySelectorAll('.dropdown');
-      
+
       for (let i = 0; i < dropdownMenu.length; i++) {
           dropdownMenu[i].addEventListener("click", function() {
           this.classList.toggle('open');

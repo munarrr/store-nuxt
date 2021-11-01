@@ -1074,7 +1074,7 @@
 		flex-direction:column;
 	}
 	.flex-container {
-		display: flex;       
+		display: flex;
 		width: 85%;
 		margin:0 auto;
 		height: 100%;
@@ -1084,16 +1084,16 @@
 	  .flex-container > div{
 		border-radius: 5px;
 		padding: 8px;
-	   
-	  } 
-	  .flex-container-item1 { 
+
+	  }
+	  .flex-container-item1 {
 		/* flex:1 1 auto; */
 		order:0;
 		flex-grow:2;
 		flex-shrink:1;
 		width: 90%;;
-	  }		  
-	  .flex-container-item2 { 
+	  }
+	  .flex-container-item2 {
 		/* flex:6 1 auto; */
 		order:0;
 		flex-grow:7;
@@ -1106,7 +1106,7 @@
 		border-radius: 9px;
 		object-fit: cover;
 	  }
-	 
+
 }
 
 
