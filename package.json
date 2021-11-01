@@ -1,0 +1,27 @@
+{
+  "name": "linoor",
+  "version": "1.0.0",
+  "description": "Linoor - Vue Nuxt Digital Agency Services Template",
+  "author": "Layerdrops",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/i18n": "^7.1.0",
+    "mixitup": "^3.3.1",
+    "nuxt": "^2.0.0",
+    "swiper": "^5.4.5",
+    "v-owl-carousel": "^1.0.8",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-count-to": "^1.0.13",
+    "vue-i18n": "^8.26.5",
+    "vue-observe-visibility": "^0.4.6",
+    "vue-toastification": "^1.7.14"
+  },
+  "devDependencies": {}
+}
